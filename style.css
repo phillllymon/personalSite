@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top_row {
+    width: 975px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menu {
+    width: 180px;
+    color: black;
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.linkIsh {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.linkIshSpecial {
+    color: black;
+    text-decoration: none;
+}
+
+.linkIshSpecial:hover {
+    cursor: default;
+}
+
+.title_text {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    height: 120px;
+    color: black;
+}
+
+.black_text {
+    width: 100%;
+    color: black;
+}
+
+.short_content {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    color: gray;
+    font-size: 22px;
+}
+
+.bioHidden {
+    display: none;
+}
+
+.bioShrunk {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    width: 975px;
+    animation-name: shrink;
+    animation-duration: 1s;
+    height: 0px;
+    overflow: hidden;
+}
+
+.bioAlive {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    width: 975px;
+    height: 650px;
+    animation-name: grow;
+    animation-duration: 1s;
+}
+
+@keyframes grow {
+    0%      {opacity: 0; height: 0px}
+    100%    {opacity: 1; height: 650px}
+}
+
+@keyframes shrink {
+    0%      {opacity: 1; height: 650px}
+    100%    {opacity: 0; height: 0px}
+}
+
+iframe {
+    padding: 0px;
+    margin: 0px;
+}
+
+.resumeHidden {
+    display: none;
+}
+
+.resumeShrunk {
+    width: 975px;
+    animation-name: resShrink;
+    animation-duration: 1s;
+    height: 0px;
+    overflow: hidden;
+}
+
+.resumeAlive {
+    width: 975px;
+    height: 1150px;
+    animation-name: resGrow;
+    animation-duration: 1s;
+}
+
+@keyframes resGrow {
+    0%      {opacity: 0; height: 0px}
+    100%    {opacity: 1; height: 1150px}
+}
+
+@keyframes resShrink {
+    0%      {opacity: 1; height: 1150px}
+    100%    {opacity: 0; height: 0px}
+}

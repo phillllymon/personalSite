@@ -1,0 +1,130 @@
+.projects_total {
+    width: 975px;
+    height: 520px;
+    animation-name: projectsGrow;
+    animation-duration: 1s;
+}
+
+@keyframes projectsGrow {
+    0%      {opacity: 0; height: 0px}
+    100%    {opacity: 1; height: 520px}
+}
+
+.projects_shrunk {
+    height: 0px;
+    width: 975px;
+    overflow: hidden;
+    animation-name: projectsShrink;
+    animation-duration: 1s;
+}
+
+@keyframes projectsShrink {
+    0%      {opacity: 1; height: 520px}
+    100%    {opacity: 0; height: 0px}
+}
+
+.projects_header {
+    padding-bottom: 30px;
+    border-bottom: 2px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.projects {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 22px;
+    text-align: center;
+    color: gray;
+}
+
+.project_name {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.specialProject {
+    color: black;
+    text-decoration: none;
+}
+
+.project_title {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 28px;
+    text-decoration: underline;
+}
+
+.project_description {
+    padding: 20px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+}
+
+.project_links {
+    float: right;
+    display: flex;
+    flex-direction: row;
+}
+
+.border {
+    width: 2px;
+    height: 26px;
+    background-color: gray;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.hidden_project {
+    display: none;
+}
+
+.zombie_pic {
+    border-radius: 5px;
+    margin: 10px;
+    float: left;
+    background-image: url("dontDieTogether.png");
+    width: 500px;
+    height: 306px;
+    background-size: cover;
+    background-position: center;
+}
+
+.windWaves_pic {
+    border-radius: 5px;
+    margin: 10px;
+    float: left;
+    background-image: url("windWaves.png");
+    width: 500px;
+    height: 306px;
+    border-radius: 3px;
+    background-size: cover;
+}
+
+.checkmatey_pic {
+    border-radius: 5px;
+    margin: 10px;
+    float: left;
+    background-image: url("checkmatey1.png");
+    width: 500px;
+    height: 306px;
+    background-size: cover;
+    animation-name: pic-slideshow;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pic-slideshow {
+    0%      {background-image: url("checkmatey2.png");}
+    20%     {background-image: url("checkmatey2.png");}
+    25%     {background-image: url("checkmatey4.png");}
+    45%     {background-image: url("checkmatey4.png");}
+    50%     {background-image: url("checkmatey5.png");}
+    70%     {background-image: url("checkmatey5.png");}
+    75%     {background-image: url("checkmatey1.png");}
+    95%     {background-image: url("checkmatey1.png");}
+    100%    {background-image: url("checkmatey2.png");}
+}
