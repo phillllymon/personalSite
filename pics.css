@@ -10,11 +10,10 @@
 
 .seattle_pic {
     background-image: url("seattle.png");
-    top: 100vw;
-    /* transform: translate(0px, -100%); */
     height: 239px;
     width: 975px;
     background-size: cover;
+    z-index: -1;
 }
 
 .teaching_pic {

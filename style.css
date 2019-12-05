@@ -81,18 +81,19 @@ body {
     font-family: 'Roboto Mono', monospace;
     font-size: 18px;
     width: 975px;
-    height: 650px;
+    height: 400px;
     animation-name: grow;
     animation-duration: 1s;
+    overflow: visible;
 }
 
 @keyframes grow {
     0%      {opacity: 0; height: 0px}
-    100%    {opacity: 1; height: 650px}
+    100%    {opacity: 1; height: 400px}
 }
 
 @keyframes shrink {
-    0%      {opacity: 1; height: 650px}
+    0%      {opacity: 1; height: 400px}
     100%    {opacity: 0; height: 0px}
 }
 

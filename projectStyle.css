@@ -1,13 +1,13 @@
 .projects_total {
     width: 975px;
-    height: 520px;
+    height: 480px;
     animation-name: projectsGrow;
     animation-duration: 1s;
 }
 
 @keyframes projectsGrow {
     0%      {opacity: 0; height: 0px}
-    100%    {opacity: 1; height: 520px}
+    100%    {opacity: 1; height: 480px}
 }
 
 .projects_shrunk {
@@ -19,7 +19,7 @@
 }
 
 @keyframes projectsShrink {
-    0%      {opacity: 1; height: 520px}
+    0%      {opacity: 1; height: 480px}
     100%    {opacity: 0; height: 0px}
 }
 
