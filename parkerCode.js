@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const shrinkBio = () => {
         bio.classList.remove("bioAlive");
         bio.classList.add("bioShrunk");
+        document.bioShrunk = true;
     };
     let resume = document.getElementById("resume");
     const shrinkResume = () => {
@@ -54,10 +55,19 @@ window.addEventListener('DOMContentLoaded', () => {
         shrinkProjects();
     });
     document.getElementById("bioLink").addEventListener('click', () => {
+        document.bioShrunk = false;
         document.getElementById(currentLink).classList.remove("linkIshSpecial");
         currentLink = 'bioLink';
         document.getElementById(currentLink).classList.add("linkIshSpecial");
-        mainTitle.innerHTML = "Hi, I'm Parker.";
+        const message = "Hi, I'm Parker.";
+        let currMessage = "";
+        const messageInterval = setInterval(() => {
+            currMessage += message[currMessage.length];
+            if (!document.bioShrunk) mainTitle.innerHTML = currMessage;
+            if (currMessage.length === message.length) {
+                clearInterval(messageInterval);
+            }
+        }, 150);
         shortContent.innerHTML = '';
         bio.classList.remove("bioHidden");
         bio.classList.add("bioAlive");
